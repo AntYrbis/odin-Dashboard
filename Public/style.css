@@ -1,6 +1,6 @@
 /* Imports */
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
 /* GENERAL */
 /* Variable declaration on root for themes */
@@ -34,7 +34,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto Condensed', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--light-txt);
 }
 
@@ -56,6 +56,18 @@ img{
     background-attachment: fixed
 }
 
+/* Logo styling */
+.simple-icon{
+    height: 2rem;
+    margin-right: 0.7rem;
+    vertical-align: middle;
+}
+
+.dash-image{
+    height: 3rem;
+    margin-right: 1rem;
+}
+
 /* Link styling */
 
 
@@ -67,14 +79,13 @@ main {
     width: 100%;
     overflow: hidden;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+    grid-template-columns: minmax( 225px , 1fr) minmax(0, 3fr) minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr) minmax(0, 5fr);
 }
 
 header{
     grid-column: 2/end;
     grid-row: 1;
-    min-width: 0;
     background-color: var(--secondary);
     color: var(--secondary-txt);
 }
@@ -82,7 +93,6 @@ header{
 .side{
     grid-column: 3;
     grid-row: 2 / end;
-    min-width: 0;
     background-color: var(--light);
     color: var(--light-txt);
     display: grid;
@@ -92,7 +102,6 @@ header{
 .main-container{
     grid-column: 2;
     grid-row: 2 / end;
-    min-width: 0;
     background-color: var(--light);
     color: var(--light-txt);
 }
@@ -100,21 +109,19 @@ header{
 .sidebar{
     grid-column: 1;
     grid-row: 1 / end;
-    min-width: 0;
     background-color: var(--main);
     color: var(--main-txt);
+    display: grid;
+    grid-template-rows: minmax(0, auto) minmax(0, 1fr) minmax(0, 1fr);
 }
 
 /* Secondary grids*/
+/*
 .annoncments{
-    grid-row: 1;
-    min-width: 0;
 }
 
 .trending{
-    grid-row: 2;
-    min-width: 0;
-}
+}*/
 
 /* Header */
 /* The slider container */
@@ -130,6 +137,8 @@ header{
     right: 3em;
     width: 60px;
     height: 34px;
+    border-radius: 34px;    
+    border: 0.25vw inset var(--main-txt);
 }
 
 .theme-toggle:hover {
@@ -214,6 +223,34 @@ input:checked+#slider.light:before {
 }
 
 /* SIDEBAR */
+.heading-bar{
+    margin-left: 5%;
+    margin-top: 1rem;
+    padding: 0.5rem;    
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20%;
+}
+
+.main-bar{
+    margin-left: 15%;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.setting-bar{
+    margin-left: 15%;
+    font-size: 1.3rem;
+}
+
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0.8rem;
+    padding-top: 0; 
+}
 
 /* MAIN CONTAINER */
 
