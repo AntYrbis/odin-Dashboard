@@ -7,6 +7,7 @@
 :root {
     --main-blue: rgb(64, 123, 255);
     --error: rgb(231, 80, 80);
+    --grey :rgb(143, 143, 143);
 }
 
 :root.light {
@@ -40,21 +41,15 @@
 
 body {
     overflow: hidden;
+    background-color: var(--light);
 }
 
 img{
     max-width: 100%;
 }
 
-.honeycomb_background{
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-	height: 100%;
-	background: center url("./Images/honeycomb.svg");
-	background-size: 16px;
-    background-attachment: fixed
-}
+/* Background */ 
+
 
 /* Logo styling */
 .simple-icon{
@@ -68,9 +63,17 @@ img{
     margin-right: 1rem;
 }
 
+/* Title */
+.title{
+    font-size: 2rem;
+    padding: 2%;
+}
+
+.title.main{
+    grid-column: 1/end;
+}
+
 /* Link styling */
-
-
 
 /* GRID */
 /* Main grids */
@@ -79,31 +82,8 @@ main {
     width: 100%;
     overflow: hidden;
     display: grid;
-    grid-template-columns: minmax( 225px , 1fr) minmax(0, 3fr) minmax(0, 1fr);
+    grid-template-columns: minmax( 225px , 1fr) minmax(0, 4fr);
     grid-template-rows: minmax(0, 1fr) minmax(0, 5fr);
-}
-
-header{
-    grid-column: 2/end;
-    grid-row: 1;
-    background-color: var(--secondary);
-    color: var(--secondary-txt);
-}
-
-.side{
-    grid-column: 3;
-    grid-row: 2 / end;
-    background-color: var(--light);
-    color: var(--light-txt);
-    display: grid;
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
-}
-
-.main-container{
-    grid-column: 2;
-    grid-row: 2 / end;
-    background-color: var(--light);
-    color: var(--light-txt);
 }
 
 .sidebar{
@@ -115,9 +95,55 @@ header{
     grid-template-rows: minmax(0, auto) minmax(0, 1fr) minmax(0, 1fr);
 }
 
+header{
+    grid-column: 2;
+    grid-row: 1;
+    background-color: var(--secondary);
+    color: var(--secondary-txt);
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 5px 10px var(--main);
+}
+
+.main-container{
+    grid-column: 2;
+    grid-row: 2;
+    color: var(--light-txt);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+}
+
+.main-content{
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: auto repeat(2, minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 15px;
+    border-radius: 15px 0px 0px 15px;
+    box-shadow: -4px 5px 5px var(--main);
+	background: center url("./Images/honeycomb.svg");
+	background-size: 16px;
+    background-attachment: fixed;
+    padding: 15px;
+}
+
+.side{
+    grid-column: 2;
+    background-color: var(--light);
+    color: var(--light-txt);
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+	background: center url("./Images/honeycomb.svg");
+    border-radius: 0px 15px 15px 0px;
+    box-shadow: 4px 5px 5px var(--main);
+	background-size: 16px;
+    background-attachment: fixed;
+    padding: 15px;
+}
+
 /* Secondary grids*/
 /*
-.annoncments{
+.announcements{
 }
 
 .trending{
@@ -253,10 +279,31 @@ li{
 }
 
 /* MAIN CONTAINER */
+.project-container{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: var(--secondary);
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.medium-title{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.project-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-content{
+    display: flex;
+    justify-content: end;
+}
 
 /* SIDE */
-
-.hey{
-    padding: 20px;
-    font-size: 2rem;
-}
