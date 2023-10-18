@@ -10,12 +10,39 @@
 </head>
 <body>
     <main>
-
         <header>
-            <label class="switch" onchange="setToggleTheme()">
-                <input type="checkbox">
-                <span id="slider"></span>
-            </label>
+            <div class="search-container">
+                <div class="search-content">
+                    <img class="simple-icon" src="./Public/Images/icons/search-alt.svg" alt="settings icon">
+                </div>
+            </div>
+            <div class="settings-container">
+                <img class="simple-icon" src="./Public/Images/icons/bell-notification.svg" alt="settings icon">
+                <img class="settings-icon" src="./Public/Images/antyrbis/antyrbis_blue.svg" alt="logo Antyrbis">
+                <div class="settings-name">
+                    AntYrbis
+                </div>
+            </div>
+            <div class="profile-container">
+                <img class="profile-icon" src="./Public/Images/antyrbis/antyrbis_blue.svg" alt="settings icon">
+                <div class="profile-text">
+                    Hi there,
+                    <div class="profile-name"> 
+                        AntYrbis (@antyrbis) !
+                    </div>
+                </div>
+            </div>
+            <div class="switch-container">
+                <label class="switch" onchange="setToggleTheme()">
+                    <input type="checkbox">
+                    <span id="slider"></span>
+                </label>
+            </div>
+            <div class="buttons-container">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>                    
+            </div>
         </header>
 
         <div class="sidebar">
@@ -44,41 +71,197 @@
         <div class="main-container">
             <div class="main-content">
                 <div class="title main">Your Projects</div>
-                <div class="project-container">
-                    <div class="medium-title">My project 1</div>
-                    <div class="project-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                <div class="projects-container">
+                    <div class="project-container">
+                        <div class="title-medium">My project 1</div>
+                        <div class="project-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                        </div>
+                        <div class="project-content"> 
+                            <ul>
+                                <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
+                                <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
+                                <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project-content"> 
-                        <ul>
-                            <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
-                            <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
-                            <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
-                        </ul>
+                    <div class="project-container">
+                        <div class="title-medium">My project 2</div>
+                        <div class="project-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                        </div>
+                        <div class="project-content"> 
+                            <ul>
+                                <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
+                                <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
+                                <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="project-container">
-                    <div class="medium-title">My project 2</div>
-                    <div class="project-text">
-                        Pellentesque ultrices felis non lorem consequat malesuada. Etiam faucibus massa viverra erat hendrerit semper. Cras ut sem convallis, venenatis mauris id, sodales ipsum. Cras interdum blandit fermentum. Morbi semper sollicitudin placerat. Suspendisse scelerisque mauris ut mattis aliquam. In lorem ligula, viverra vitae eros ac, condimentum malesuada ligula. Pellentesque rhoncus sapien nec metus facilisis molestie. Aenean elementum neque sed tincidunt feugiat.
+                    <div class="project-container">
+                        <div class="title-medium">My project 3</div>
+                        <div class="project-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                        </div>
+                        <div class="project-content"> 
+                            <ul>
+                                <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
+                                <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
+                                <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project-content"> 
-                        <ul>
-                            <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
-                            <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
-                            <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
-                        </ul>
+                    <div class="project-container">
+                        <div class="title-medium">My project 4</div>
+                        <div class="project-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                        </div>
+                        <div class="project-content"> 
+                            <ul>
+                                <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
+                                <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
+                                <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                    <div class="project-container">
+                        <div class="title-medium">My project 5</div>
+                        <div class="project-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                        </div>
+                        <div class="project-content"> 
+                            <ul>
+                                <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
+                                <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
+                                <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="title-medium">My project 6</div>
+                        <div class="project-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                        </div>
+                        <div class="project-content"> 
+                            <ul>
+                                <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
+                                <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
+                                <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="title-medium">My project 7</div>
+                        <div class="project-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                        </div>
+                        <div class="project-content"> 
+                            <ul>
+                                <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
+                                <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
+                                <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="title-medium">My project 8</div>
+                        <div class="project-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                        </div>
+                        <div class="project-content"> 
+                            <ul>
+                                <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
+                                <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
+                                <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-container">
+                        <div class="title-medium">My project 9</div>
+                        <div class="project-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris mauris, euismod vel nisl vel, fringilla imperdiet lacus. Ut et ligula elit. Vivamus vitae eros lacinia, condimentum elit in, fermentum mauris. Pellentesque tortor justo, ullamcorper nec vestibulum sed, imperdiet in odio. Ut lacinia mauris quis ligula maximus porttitor. Curabitur condimentum diam bibendum erat lobortis, elementum vestibulum nisi maximus. Duis sollicitudin lacinia orci.
+                        </div>
+                        <div class="project-content"> 
+                            <ul>
+                                <img src="./Public/Images/icons/star-plus-outline.svg" alt="favorite project">
+                                <img src="./Public/Images/icons/eye-plus-outline.svg" alt="see more">
+                                <img src="./Public/Images/icons/source-fork.svg" alt="fork project">
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
             </div>
             <div class="side">
                 <div class="announcements">
-                    <div class="title">Announcements</div>
-    
+                    <div class="title big">Announcements</div>
+                    <div class="announcements-container">
+                        <div class="announcement-container">
+                            <div class="title.small">News 1</div>
+                            <div class="announcement-text">
+                                Pellentesque ultrices felis non lorem consequat malesuada. Etiam faucibus massa viverra erat hendrerit semper. Cras ut sem convallis, venenatis mauris id, sodales ipsum. Cras interdum blandit fermentum. Morbi semper sollicitudin placerat. Suspendisse scelerisque mauris ut mattis aliquam. In lorem ligula, viverra vitae eros ac, condimentum malesuada ligula. Pellentesque rhoncus sapien nec metus facilisis molestie. Aenean elementum neque sed tincidunt feugiat.
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="announcement-container">
+                            <div class="title.small">News 2</div>
+                            <div class="announcement-text">
+                                Pellentesque ultrices felis non lorem consequat malesuada. Etiam faucibus massa viverra erat hendrerit semper. Cras ut sem convallis, venenatis mauris id, sodales ipsum. Cras interdum blandit fermentum. Morbi semper sollicitudin placerat. Suspendisse scelerisque mauris ut mattis aliquam. In lorem ligula, viverra vitae eros ac, condimentum malesuada ligula. Pellentesque rhoncus sapien nec metus facilisis molestie. Aenean elementum neque sed tincidunt feugiat.
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="announcement-container">
+                            <div class="title.small">News 3</div>
+                            <div class="announcement-text">
+                                Pellentesque ultrices felis non lorem consequat malesuada. Etiam faucibus massa viverra erat hendrerit semper. Cras ut sem convallis, venenatis mauris id, sodales ipsum. Cras interdum blandit fermentum. Morbi semper sollicitudin placerat. Suspendisse scelerisque mauris ut mattis aliquam. In lorem ligula, viverra vitae eros ac, condimentum malesuada ligula. Pellentesque rhoncus sapien nec metus facilisis molestie. Aenean elementum neque sed tincidunt feugiat.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="trending">
-                    <div class="title">Your Projects</div>
-    
+                <div class="trendings">
+                    <div class="title big">Trending</div>
+                    <div class="trendings-container">
+                        <div class="trending-container">
+                            <div class="trending-profil">
+                                <img class="simple-icon" src="./Public/Images/antyrbis/antyrbis_blue.svg" alt="logo Antyrbis">
+                            </div>
+                            <div class="trending-profile">
+                                <div class="trending-handle">
+                                    @Stefan Serious
+                                </div>
+                                <div class="trending-text">
+                                    Work at YES Company.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="trending-container">
+                            <div class="trending-profil">
+                                <img class="simple-icon" src="./Public/Images/antyrbis/antyrbis_blue.svg" alt="logo Antyrbis">
+                            </div>
+                            <div class="trending-profile">
+                                <div class="trending-handle">
+                                    @Stephen Soserious
+                                </div>
+                                <div class="trending-text">
+                                    Work at NO Company.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="trending-container">
+                            <div class="trending-profil">
+                                <img class="simple-icon" src="./Public/Images/antyrbis/antyrbis_blue.svg" alt="logo Antyrbis">
+                            </div>
+                            <div class="trending-profile">
+                                <div class="trending-handle">
+                                    @Evan Whysoserious
+                                </div>
+                                <div class="trending-text">
+                                    Work at WHY NOT Company.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
