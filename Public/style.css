@@ -110,6 +110,17 @@ button:hover{
     transform: scale(1.1)
 }
 
+.settings-icon{
+    cursor: pointer;
+    transition: 0.4s;
+    transform: scale(1.1)
+}
+
+.profile-icon{
+    cursor: pointer;
+    transition: 0.4s;
+    transform: scale(1.1)
+}
 /* Title */
 .title{
     font-size: 2rem;
@@ -520,4 +531,33 @@ li{
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media only screen and (max-width: 750px) {
+    body {
+        width: 100%;
+        overflow: visible;
+        font-size: 14px;
+    }
+  
+    .main-content {
+        grid-template-columns: minmax(0, 1fr); /* Par exemple, une seule colonne pour les mobiles */
+    }
+
+
+}
+
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+    body {
+            font-size: 16px;
+    }
+
+    .main-content {
+            grid-template-columns: minmax(225px, 1fr) minmax(0, 3fr); /* Par exemple, deux colonnes pour les tablettes */
+    }
+
+    /* Ajoutez d'autres styles spécifiques aux tablettes ici */
+
 }
