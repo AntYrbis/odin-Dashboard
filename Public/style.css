@@ -50,10 +50,6 @@ body {
     background-color: var(--light);
 }
 
-img{
-    max-width: 100%;
-}
-
 button{
     padding: 10px;
     width: 5vw;
@@ -105,23 +101,35 @@ button:hover{
     margin-right: 1rem;
 }
 
+.settings-icon{
+    height: 3rem;
+    margin-right: 0.7rem;
+    vertical-align: middle;
+}
+
+.profile-icon{
+    height: 4rem;
+    margin-right: 0.7rem;
+    vertical-align: middle;
+}
+
 .nav-styles li:hover{
     cursor: pointer;
     transition: 0.4s;
     transform: scale(1.1)
 }
 
-.settings-icon{
+.settings-icon:hover{
+    cursor: pointer;
+    transition: 0.4s;
+    transform: scale(1.1)
+}
+.profile-icon:hover{
     cursor: pointer;
     transition: 0.4s;
     transform: scale(1.1)
 }
 
-.profile-icon{
-    cursor: pointer;
-    transition: 0.4s;
-    transform: scale(1.1)
-}
 /* Title */
 .title{
     font-size: 2rem;
@@ -289,11 +297,6 @@ header{
 
 /* HEADER */
 /* Main content */
-.settings-icon{
-    height: 3rem;
-    margin-right: 0.7rem;
-    vertical-align: middle;
-}
 
 .search-content{
     height: 2rem;
@@ -309,12 +312,6 @@ header{
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     margin-right: 20px;
-}
-
-.profile-icon{
-    height: 4rem;
-    margin-right: 0.7rem;
-    vertical-align: middle;
 }
 
 .profile-name{
@@ -530,29 +527,216 @@ li{
 
 
 /* RESPONSIVE DESIGN */
-@media only screen and (max-width: 750px) { /* mobiles */
+@media only screen and (max-width: 750px) and (orientation: portrait) { /* mobiles */
     body {
         width: 100%;
         overflow: visible;
         font-size: 0.5rem;
     }
-  
-    .main-content {
-        grid-template-columns: minmax(0, 1fr); 
+
+    main {
+        grid-template-rows: minmax(0,  85px) minmax(0, 2fr);
+        grid-template-columns: 1fr;
+        height: 200dvh;
+        width: 100%;
+    }
+    
+    .content-bar{
+        width: 55px;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        z-index: 1;
     }
 
+    .content-bar span{
+        display: none;
+    }
 
+    .main-bar {
+        margin-left: 0%;
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .heading-bar{
+        top: 0;
+        left: 0;
+    }
+
+    .sidebar{
+        width: 55px;
+        margin-top:85px;
+        height: calc(100dvh - 85px);
+        overflow: hidden;
+        position: sticky;
+        grid-column: 1;
+        grid-row: 1 / end;
+        grid-template-rows: minmax(0, auto) repeat(3, minmax(0, 1fr));
+    }
+        
+    header{
+        position: absolute;
+        width: 100dvw;
+        height: 85 px;
+        padding: 5px;
+        grid-template: repeat(2, minmax(0,1fr)) repeat(3, minmax(0,1fr));
+    }
+
+    .heading-bar {
+        margin-left: 0%;
+        font-size: 1.8rem;
+    }
+
+    .setting-bar{
+        margin-left: 0%;
+        font-size: 1rem;
+    }
+
+    .main-container{
+        gap: 20px;
+    }
+
+    .main-content{
+        grid-column: 1/end;
+        grid-row: 1;
+        gap: 0px;
+        padding: 0px;
+        border-radius: 15px 15px 15px 15px;
+        box-shadow: -4px 5px 5px var(--main);
+    }
+
+    .side{
+        grid-column: 1/end;
+        grid-row: 2;
+        gap: 0px;
+        padding: 0px;
+        border-radius: 15px 15px 15px 15px;
+        box-shadow: -4px 5px 5px var(--main);
+    }
+       
+    /* LOGO styling */
+    .small-icon{
+        height: 1.1rem;
+    }
+    .simple-icon{
+        height: 2rem;
+    }
+
+    .dash-image{
+        height: 2.5rem;
+    }
+
+    .settings-icon{
+        height: 2.2rem;
+    }
+
+    .profile-icon{
+        height: 2rem;
+    }
+
+    .profile-container{
+        display: none;
+    }
+
+    .settings-container { 
+        grid-column: 3;
+        gap: 0px; 
+        margin-right: 0%;
+    }
+
+    .switch-container {
+        grid-column: 1/3; 
+        grid-row: 2;
+        justify-content: center; 
+        margin-right: 0%;
+    }
+
+    .buttons-container {
+        justify-content: center;
+        gap: 20px;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 8px;
+        width: 14vw;
+    }
+
+    .projects-container {
+        grid-row: 2/end;
+        grid-column: 1/end;
+        height: calc(100dvh - 390px);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 5px;
+    }
 }
 
 @media only screen and (min-width: 751px) and (max-width: 1024px) { /*les tablette*/
     body {
-            font-size: 0.7rem;
+        width: 100%;
+        overflow: hidden;
+        font-size: 0.7rem;
     }
 
-    .main-content {
-            grid-template-columns: minmax(225px, 1fr) minmax(0, 3fr); 
+    main {
+        grid-template-rows: minmax(0, 250px) minmax(0, 5fr);
+        grid-template-columns: 1fr;
+        height: 100dvh;
+        width: 100%;
+    }
+    
+    .main-bar {
+        font-size: 1.2rem;
     }
 
-   
+    .sidebar{
+        grid-column: 1;
+        grid-row: 1 / end;
+        grid-template-rows: minmax(0, auto) minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .heading-bar {
+        margin-left: 0%;
+        font-size: 1.8rem;
+    }
+        
+    header{
+        gap: 0px;
+    }
+
+    .main-container{
+        gap: 0px;
+    }
+
+    .main-content{
+        gap: 0px;
+        padding: 0px;
+    }
+
+    .side{
+        gap: 0px;
+        padding: 0px;
+    }
+
+        
+    /* LOGO styling */
+    .simple-icon{
+        height: 2rem;
+    }
+
+    .dash-image{
+        height: 3rem;
+        margin-right: 1rem;
+    }
+
+    .settings-icon{
+        height: 1rem;
+    }
+
+    .profile-icon{
+        height: 2rem;
+    }
 
 }

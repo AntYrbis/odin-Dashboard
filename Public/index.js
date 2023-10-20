@@ -38,25 +38,3 @@ function setToggleTheme() {
 const colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 setColorScheme(colorSchemeQueryList);
 colorSchemeQueryList.addEventListener('change', setColorScheme);
-
-/* Listening to intersection for the sticky switch on mobile design*//*
-if (
-    "IntersectionObserver" in window &&
-    "IntersectionObserverEntry" in window &&
-    "intersectionRatio" in window.IntersectionObserverEntry.prototype
-) {
-let observer = new IntersectionObserver(entries => {
-    if (entries[0].boundingClientRect.y < 0) {
-        const toggle = document.getElementsByClassName('switch')[0];
-        toggle.classList.add("not_top");
-        toggle.classList.remove("top");
-        console.log("add")
-    } else {
-        const toggle = document.getElementsByClassName('switch')[0];
-        toggle.classList.add("not_top");
-        toggle.classList.remove("not_top");
-        console.log("remove")
-    }
-});
-observer.observe(document.querySelector("#top-of-site-pixel-anchor"));
-}*/
