@@ -666,7 +666,7 @@ li{
     .projects-container {
         grid-row: 2/end;
         grid-column: 1/end;
-        height: calc(100dvh - 390px);
+        height: calc(100dvh - 85px);
         display: grid;
         grid-template-columns: repeat(2, minmax(0,1fr));
         gap: 5px;
