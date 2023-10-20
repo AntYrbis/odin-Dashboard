@@ -569,7 +569,6 @@ li{
         margin-top:85px;
         height: calc(100dvh - 85px);
         overflow: hidden;
-        position: sticky;
         grid-column: 1;
         grid-row: 1 / end;
         grid-template-rows: minmax(0, auto) repeat(3, minmax(0, 1fr));
@@ -666,7 +665,7 @@ li{
     .projects-container {
         grid-row: 2/end;
         grid-column: 1/end;
-        height: calc(100dvh - 85px);
+        height: 100dvh;
         display: grid;
         grid-template-columns: repeat(2, minmax(0,1fr));
         gap: 5px;
