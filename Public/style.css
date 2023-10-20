@@ -535,6 +535,7 @@ li{
     }
 
     main {
+        overflow: visible;
         grid-template-rows: minmax(0,  85px) minmax(0, 2fr);
         grid-template-columns: 1fr;
         height: 200dvh;
@@ -549,6 +550,9 @@ li{
         z-index: 1;
     }
 
+    .heading-bar span{
+        display: none;
+    }
     .content-bar span{
         display: none;
     }
@@ -565,19 +569,20 @@ li{
     }
 
     .sidebar{
+        position: sticky;
+        top: 0;
         width: 55px;
-        margin-top:85px;
-        height: calc(100dvh - 85px);
-        overflow: hidden;
+        height: 100dvh;
         grid-column: 1;
         grid-row: 1 / end;
         grid-template-rows: minmax(0, auto) repeat(3, minmax(0, 1fr));
     }
         
     header{
-        position: absolute;
+        position: sticky;
+        top: 0;
         width: 100dvw;
-        height: 85 px;
+        height: 90px;
         padding: 5px;
         grid-template: repeat(2, minmax(0,1fr)) repeat(3, minmax(0,1fr));
     }
