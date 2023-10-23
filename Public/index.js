@@ -38,3 +38,23 @@ function setToggleTheme() {
 const colorSchemeQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 setColorScheme(colorSchemeQueryList);
 colorSchemeQueryList.addEventListener('change', setColorScheme);
+
+function openmenu(){
+    var side = document.getElementById("sidecontent");
+    var sidebar = document.getElementById("sidebar");
+    side.className =  side.className === "sidecontent closetab" ? "sidecontent opentab" : "sidecontent closetab";
+    sidebar.className =  sidebar.className === "sidebar closetab" ? "sidebar opentab" : "sidebar closetab";
+}
+
+function opentab(tabname){
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    for (tablink of tablinks){
+        tablink.classList.remove("active");
+    }
+    for (tabcontent of tabcontents){
+        tabcontent.classList.remove("active");
+    }
+    event.currentTarget.classList.add("active")
+    document.getElementById(tabname).classList.add("active")
+}

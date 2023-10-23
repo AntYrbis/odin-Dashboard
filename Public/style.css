@@ -530,30 +530,35 @@ li{
 @media only screen and (max-width: 750px) and (orientation: portrait) { /* mobiles */
     body {
         width: 100%;
-        overflow: visible;
+        overflow-y: visible;
         font-size: 0.5rem;
     }
 
     main {
-        overflow: visible;
+        overflow-y: visible;
         grid-template-rows: minmax(0,  85px) minmax(0, 2fr);
         grid-template-columns: 1fr;
         height: 200dvh;
         width: 100%;
     }
     
-    .content-bar{
-        width: 55px;
+    .content-bar.closetab{
+        position: sticky;
         top: 0;
         left: 0;
         transition: 0.5s;
         z-index: 1;
     }
 
-    .heading-bar span{
-        display: none;
+    .content-bar.closetab{
+        width: 55px;
     }
-    .content-bar span{
+
+    .content-bar.opentab{
+        width: 40dvw;
+    }
+
+    .heading-bar span{
         display: none;
     }
 
@@ -571,11 +576,22 @@ li{
     .sidebar{
         position: sticky;
         top: 0;
-        width: 55px;
-        height: 100dvh;
+        height: 100%;
         grid-column: 1;
         grid-row: 1 / end;
         grid-template-rows: minmax(0, auto) repeat(3, minmax(0, 1fr));
+    }
+
+    .sidebar.closetab{
+        width: 55px;
+    }
+
+    .sidebar.closetab span{
+        display: none;
+    }
+
+    .sidebar.opentab{
+        width: 45dvw;
     }
         
     header{
